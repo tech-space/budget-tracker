@@ -27,8 +27,19 @@ gulp.task('copy:html', function() {
         .pipe(gulp.dest(dist));
 });
 
-gulp.task('default', ['compile:css', 'compile:es6', 'copy:html']);
-gulp.task('watch', function() {
+gulp.task('copy:assets', function() {
+    console.log('Copy Assets - Begin');
+    gulp.src('./app/assets/*.css')
+        .pipe(gulp.dest(dist + 'css'));
+    gulp.src('./app/assets/*.js')
+        .pipe(gulp.dest(dist + 'js'));
+    return;
+});
+
+gulp.task('default', ['compile:css', 'compile:es6', 'copy:html', 'copy:assets']);
+gulp.task('watch', ['default'], function() {
     gulp.watch(sassPath + '/*.scss', ['compile:css']);
     gulp.watch(jsPath + '/*.js', ['compile:es6']);
+    gulp.watch(basePath + '/*.html', ['copy:html']);
+    return;
 });

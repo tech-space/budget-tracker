@@ -2,10 +2,26 @@
 <html>
     <head>
         <title>Budget Tracker</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-
+        <div class="container-fluid">
+            <h1>Budget Tracker</h1>
+            <nav>
+                <li>Add Expense</li>
+                <li>View Expense</li>
+            </nav>
+            <section class="view">
+                Category: <input type="text" value="" id="category" />
+                Price: <input type="text" value="" id="price" />
+                Date: <input type="text" value="" id="date" />
+                Month: <input type="text" value="" id="month" />
+                Year:  <input type="text" value="" id="year" />
+                Description: <textarea id="description"></textarea>
+                <button id="submit_expense">Submit</button>
+            </section>
+        </div>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
