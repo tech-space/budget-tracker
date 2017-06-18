@@ -18,7 +18,7 @@ This opens up a connection and things are good to go.
     - This builds the docker container
     - To check the files inside the container, use the command,
         ```
-        docker run -it budgettracker01 /bin/bash
+        docker run -it {some-name} /bin/bash
         ```
 
 
