@@ -20,7 +20,9 @@ This opens up a connection and things are good to go.
         ```
         docker run -it {some-name} /bin/bash
         ```
-
-
-TODO
-    1. Add nginx conf to serve the static files from the docker
+    - To bring up the server, use the command,
+        ```
+        docker run -p {external-port}:{internal-port} {some-name}
+        eg.) docker run -p 5000:90 budgettracker01
+        Hit localhost:5000 to see the application
+        ```
