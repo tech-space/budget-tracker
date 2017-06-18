@@ -1,0 +1,12 @@
+
+#Cassandra Database
+
+#open > cqlsh
+
+CREATE KEYSPACE "budgettracker" WITH replication = {'class' : 'SimpleStrategy', 'replication_factor':1} ;
+
+USE budgettracker;
+
+CREATE TABLE expense (username text, category text, description text, price decimal, record_ts int PRIMARY KEY);
+
+INSERT INTO expense(username, category, description, price, record_ts) values('Arun', 'FOOD', 'Dinner', 100.50, 1497736008);
